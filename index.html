@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/501a409cb6.js" crossorigin="anonymous"></script>
+
+  <!-- Fusion Charts -->
+  <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+  <!-- Include fusion theme -->
+  <script type="text/javascript"
+    src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+
+</head>
+
+<body>
+  <aside>
+    <nav>
+      <!-- Mobile menu start -->
+      <div class="mobile">
+        <ul id="mobile">
+          <li><i class="fa-solid fa-house active"></i></li>
+          <li><i class="fas fa-newspaper"></i></li>
+          <li><i class="fas fa-list-alt"></i></li>
+          <li><i class="fas fa-user"></i></li>
+          <li><i class="fas fa-search"></i></li>
+        </ul>
+        <div class="notification"><i class="fas fa-bell"></i></div>
+      </div>
+      <!-- Mobile menu end -->
+      <!-- Desktop menu start -->
+      <div id="desktop">
+        <ul>
+          <img src="./assets/images/butterfly.png" alt="logo">
+          <li><i class="fas fa-search"></i></li>
+        </ul>
+        <ul class="mid-menu">
+          <li><i class="fa-solid fa-house active"></i></li>
+          <li><i class="fas fa-newspaper"></i></li>
+          <li><i class="fas fa-list-alt"></i></li>
+          <li><i class="fas fa-user"></i></li>
+
+        </ul>
+        <ul class="bottom-menu">
+          <li><i class="fas fa-bell"></i></li>
+          <li><i class="fas fa-sign-out-alt"></i></li>
+        </ul>
+
+      </div>
+      <!-- Desktop menu end -->
+    </nav>
+  </aside>
+  <main>
+    <section class="summary">
+      <div class="user">
+        <div class="user-img">
+          <img src="./assets/images/profile.jpeg" alt="profile picture">
+        </div>
+        <div class="welcome">
+          <h2>Hi Mike,</h2>
+          <p class="welcome-msg">welcome back.</p>
+        </div>
+      </div>
+
+      <div class="account">
+        <div class="today">
+          <h3>Today</h3>
+          <div class="balance">$19,892</div>
+          <span>Account Balance</span>
+        </div>
+        <div class="total">
+          <div class="year-to">
+            <h3>$4,000</h3>
+            <span>Year-to-Date</span>
+          </div>
+          <div class="interest">
+            <h3>$1892</h3>
+            <span>Total Interest</span>
+          </div>
+        </div>
+        <button>I want to...</button>
+      </div>
+
+      <div class="transactions">
+        <h3>Recent Transactions</h3>
+        <div class="transaction">
+          <div class="date">2020-08-07</div>
+          <div class="description">Withdrawal Transfer to Bank-XXX11</div>
+        </div>
+        <hr>
+        <div class="transaction">
+          <div class="date">2020-07-21</div>
+          <div class="description">Withdrawal Transfer to Bank-XXX11</div>
+        </div>
+        <hr>
+        <div class="transaction">
+          <div class="date">2020-07-16</div>
+          <div class="description">Withdrawal Transfer to Bank-XXX11</div>
+        </div>
+        <hr>
+      </div>
+    </section>
+    <section class="visual">
+      <div class="title">
+        <span>Retirement Income</span>
+        <h3>Starting Year 2056</h3>
+      </div>
+      <div class="plan">
+        <div class="goal">
+          <div class="balance">$300,000</div>
+          <span>My Goal</span>
+        </div>
+
+        <div class="achieved">
+          <h3>59%</h3>
+          <span>Goal Achieved</span>
+        </div>
+        <div class="income">
+          <h3>K 300</h3>
+          <span>Est. Monthly Income</span>
+        </div>
+
+      </div>
+      <div class="contributions">
+        <h3>Contributions Overtime</h3>
+      </div>
+      <div id="chart-container">FusionCharts XT will load here!</div>
+      <div class="comparison">
+        <h3>How do I compare to my peers?</h3>
+        <p>These numbers represent current goal achievement</p>
+      </div>
+      <div class="comparison-data">
+        <div class="filter">
+          <div class="age">
+            <span>Age:</span>
+            <select name="age" id="age">
+              <option value="age">Under 30</option>
+              <option value="age">under 20</option>
+              <option value="age">under 17</option>
+              <option value="age">Above 30</option>
+            </select>
+          </div>
+          <hr>
+          <div class="salary">
+            <span>Salary:</span>
+            <select name="salary" id="salary">
+              <option value="salary">K 20 - K 30</option>
+              <option value="salary">K 31 - K 40</option>
+              <option value="salary">K 41 - K 50</option>
+              <option value="salary">K 51 - K 60</option>
+            </select>
+          </div>
+          <hr>
+          <div class="gender">
+            <span>Gender:</span>
+            <select name="gender" id="gender">
+              <option value="salary">Male</option>
+              <option value="salary">Female</option>
+            </select>
+          </div>
+          <hr>
+        </div>
+        <div class="donut-charts">
+          <div id="doughnut-container">FusionCharts XT will load here!
+          </div>
+          <div id="doughnut-container-2">FusionCharts XT will load here!</div>
+          <div id="doughnut-container-3">FusionCharts XT will load here!</div>
+        </div>
+      </div>
+    </section>
+    <section class="strategy">
+      <div class="retirement-strategy">
+        <h3>Retirement Strategy</h3>
+        <div class="contribution">
+          <span>Employee Contribution</span>
+          <div class="range-data">
+            <div class="range-slider">
+              <input type="range" min="1" max="100" value="1" class="slider" id="myRange">
+            </div>
+            <p>1%</p>
+          </div>
+        </div>
+        <div class="retirement-age">
+          <span>Retirement Age</span>
+          <div class="range-data">
+            <div class="range-slider">
+              <input type="range" min="1" max="80" value="1" class="slider" id="myRange2">
+            </div>
+            <p class="age-value">1</p>
+          </div>
+        </div>
+        <hr>
+        <div class="employer-contribution">
+          <span>Employer Contribution</span>
+          <span>8.4%</span>
+        </div>
+        <div class="interest-rate">
+          <span>Interest Rate</span>
+          <span>5%</span>
+        </div>
+        <button class="update">Update</button>
+        <p class="docs">View Help Docs <i class="fas fa-chevron-right arrow"></i></p>
+      </div>
+      <div class="ad">
+        <p class="head">
+        <span>Are you considering a</span><br>
+        <span class="bold">Housing Advance?</span>
+      </p>
+        <p class="discount">Limited time reduced interest.</p>
+        <p class="docs learn">Learn More <i class="fas fa-chevron-right arrow"></i></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+  <script src="./charts/columnChart.js"></script>
+  <script src="./charts/doughnutChart.js"></script>
+
+</body>
+
+</html>
