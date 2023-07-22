@@ -47,6 +47,14 @@ button:hover {
   border: 1px solid var(--primary);
 }
 
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-thumb{
+  background: var(--primary);
+  border-radius: 10px;
+}
+
 /* Navbar */
 #mobile {
   display: flex;
@@ -379,13 +387,7 @@ input[type='range'] {
   align-items: center;
   justify-content: space-between;
 }
-::-webkit-scrollbar{
-  width: 5px;
-}
-::-webkit-scrollbar-thumb{
-  background: var(--primary);
-  border-radius: 10px;
-}
+
 .update {
   width: 100%;
   position: -webkit-sticky;
