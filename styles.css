@@ -253,6 +253,9 @@ main {
 .income {
   padding-bottom: 1rem;
   border-bottom: 2px solid var(--light-purple);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 .goal .balance,
 .plan h3 {
