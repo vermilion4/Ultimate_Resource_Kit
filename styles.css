@@ -379,14 +379,21 @@ input[type='range'] {
   align-items: center;
   justify-content: space-between;
 }
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-thumb{
+  background: var(--primary);
+  border-radius: 10px;
+}
 .update {
   width: 100%;
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
   height: 70px;
-  width: calc(100vw - 3%);
-  margin-left: -6%;
+  width: 100vw;
+  margin-left: -5.8%;
   z-index: 60;
 }
 .docs {

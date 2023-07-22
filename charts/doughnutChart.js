@@ -34,7 +34,7 @@ function chartConfig (centerLabel, data, location)
   const doughnutChartConfig = {
     type: 'doughnut2d',
     renderAt: `${ location }`,
-    width: '10%',
+    width: '30%',
     height: '250',
     dataFormat: 'json',
     dataSource: {
