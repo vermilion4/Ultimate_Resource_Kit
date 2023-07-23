@@ -34,7 +34,7 @@ function chartConfig (centerLabel, data, location)
   const doughnutChartConfig = {
     type: 'doughnut2d',
     renderAt: `${ location }`,
-    width: '10%',
+    width: '100%',
     height: '250',
     dataFormat: 'json',
     dataSource: {
@@ -63,12 +63,28 @@ function chartConfig (centerLabel, data, location)
 // Render charts
 FusionCharts.ready(function ()
 {
-  var chart1 = new FusionCharts(chartConfig('78%', doughnutChartData, 'doughnut-container'));
-  var chart2 = new FusionCharts(chartConfig('95%', secondDoughnutChartData, 'doughnut-container-2'));
-  var chart3 = new FusionCharts(chartConfig('59%', thirdDoughnutChartData, 'doughnut-container-3'));
-  chart1.render();
-  chart2.render();
-  chart3.render();
 
+  const chart1 = document.getElementById('doughnut-container');
+  chart1.classList.add('chart');
+
+  const chart2 = document.getElementById('doughnut-container-2');
+  chart2.classList.add('chart');
+
+  const chart3 = document.getElementById('doughnut-container-3');
+  chart3.classList.add('chart');
+
+  new FusionCharts(chartConfig('78%', doughnutChartData, 'doughnut-container')).render();
+  new FusionCharts(chartConfig('95%', secondDoughnutChartData, 'doughnut-container-2')).render();
+  new FusionCharts(chartConfig('59%', thirdDoughnutChartData, 'doughnut-container-3')).render();
 
 });
+
+const charts = document.querySelectorAll('.chart');
+
+if (window.matchMedia('(max-width: 768px)').matches)
+{
+  charts.forEach(chart =>
+  {
+    chart.style.width = '30%';
+  });
+}

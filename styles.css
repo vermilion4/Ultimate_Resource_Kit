@@ -284,7 +284,9 @@ h3 {
   margin-top: 2rem;
   align-items: center;
   justify-content: center;
+  flex-basis: 60%;
 }
+
 .filter {
   display: flex;
   flex-direction: column;
@@ -317,6 +319,9 @@ select {
 }
 select:focus {
   outline: none;
+}
+.chart {
+  width: 30%; 
 }
 
 /* Strategy section */
@@ -536,6 +541,9 @@ input[type='range'] {
   }
   .donut-charts {
     margin-top: 0;
+  }
+  .chart {
+    width: 30%; 
   }
   .update {
     position: relative;
