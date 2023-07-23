@@ -22,7 +22,7 @@ function createDoughnutData (label1, value1, label2, value2)
   ];
 }
 
-const doughnutChartData = createDoughnutData("Average", "22", "", "78");
+const doughnutChartData = createDoughnutData("Avg", "22", "", "78");
 
 const secondDoughnutChartData = createDoughnutData("Top", "5", "", "95");
 
@@ -41,7 +41,6 @@ function chartConfig (centerLabel, data, location)
       // Chart Configuration
       "chart": {
         "numberSuffix": "%",
-        "showLegend": false,
         "theme": "fusion",
         "defaultCenterLabel": `${ centerLabel }`,
         "centerLabel": "$value",
